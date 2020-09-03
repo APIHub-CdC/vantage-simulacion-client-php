@@ -1,15 +1,15 @@
 <?php
 
-namespace VantageSimulacion\Client;
+namespace Vantage\Simulacion\MX\Client;
 
-use \VantageSimulacion\Client\Configuration;
-use \VantageSimulacion\Client\ApiException;
-use \VantageSimulacion\Client\Model\AportantesPeticion;
-use \VantageSimulacion\Client\Model\NoAportantesPeticion;
-use \VantageSimulacion\Client\Api\VantAgeApi;
-use \VantageSimulacion\Client\Model\CatalogoContrato;
-use \VantageSimulacion\Client\Model\CatalogoFrecuenciaPago;
-use \VantageSimulacion\Client\Model\PersonaPeticion;
+use \Vantage\Simulacion\MX\Client\Configuration;
+use \Vantage\Simulacion\MX\Client\ApiException;
+use \Vantage\Simulacion\MX\Client\Model\AportantesPeticion;
+use \Vantage\Simulacion\MX\Client\Model\NoAportantesPeticion;
+use \Vantage\Simulacion\MX\Client\Api\VantAgeApi;
+use \Vantage\Simulacion\MX\Client\Model\CatalogoContrato;
+use \Vantage\Simulacion\MX\Client\Model\CatalogoFrecuenciaPago;
+use \Vantage\Simulacion\MX\Client\Model\PersonaPeticion;
 
 class VantAgeApiTest extends \PHPUnit_Framework_TestCase
 {

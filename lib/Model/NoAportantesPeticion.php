@@ -1,9 +1,9 @@
 <?php
 
-namespace VantageSimulacion\Client\Model;
+namespace Vantage\Simulacion\MX\Client\Model;
 
 use \ArrayAccess;
-use \VantageSimulacion\Client\ObjectSerializer;
+use \Vantage\Simulacion\MX\Client\ObjectSerializer;
 
 class NoAportantesPeticion implements ModelInterface, ArrayAccess
 {
@@ -14,10 +14,10 @@ class NoAportantesPeticion implements ModelInterface, ArrayAccess
     protected static $apihubTypes = [
         'folio' => 'string',
         'fecha_proceso' => 'string',
-        'tipo_contrato' => '\VantageSimulacion\Client\Model\CatalogoContrato',
-        'frecuencia_pago' => '\VantageSimulacion\Client\Model\CatalogoFrecuenciaPago',
+        'tipo_contrato' => '\Vantage\Simulacion\MX\Client\Model\CatalogoContrato',
+        'frecuencia_pago' => '\Vantage\Simulacion\MX\Client\Model\CatalogoFrecuenciaPago',
         'dias_atraso' => 'int',
-        'persona' => '\VantageSimulacion\Client\Model\PersonaPeticion'
+        'persona' => '\Vantage\Simulacion\MX\Client\Model\PersonaPeticion'
     ];
     
     protected static $apihubFormats = [

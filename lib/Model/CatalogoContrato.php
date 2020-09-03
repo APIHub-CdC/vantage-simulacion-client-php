@@ -1,7 +1,7 @@
 <?php
 
-namespace VantageSimulacion\Client\Model;
-use \VantageSimulacion\Client\ObjectSerializer;
+namespace Vantage\Simulacion\MX\Client\Model;
+use \Vantage\Simulacion\MX\Client\ObjectSerializer;
 
 class CatalogoContrato
 {

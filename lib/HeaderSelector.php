@@ -1,6 +1,6 @@
 <?php
 
-namespace VantageSimulacion\Client;
+namespace Vantage\Simulacion\MX\Client;
 
 use \Exception;
 

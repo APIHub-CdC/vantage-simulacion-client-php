@@ -1,9 +1,9 @@
 <?php
 
-namespace VantageSimulacion\Client\Model;
+namespace Vantage\Simulacion\MX\Client\Model;
 
 use \ArrayAccess;
-use \VantageSimulacion\Client\ObjectSerializer;
+use \Vantage\Simulacion\MX\Client\ObjectSerializer;
 
 class Error implements ModelInterface, ArrayAccess
 {

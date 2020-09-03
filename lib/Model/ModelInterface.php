@@ -1,6 +1,6 @@
 <?php
 
-namespace VantageSimulacion\Client\Model;
+namespace Vantage\Simulacion\MX\Client\Model;
 
 interface ModelInterface
 {

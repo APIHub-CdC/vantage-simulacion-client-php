@@ -1,9 +1,9 @@
 <?php
 
-namespace VantageSimulacion\Client\Model;
+namespace Vantage\Simulacion\MX\Client\Model;
 
 use \ArrayAccess;
-use \VantageSimulacion\Client\ObjectSerializer;
+use \Vantage\Simulacion\MX\Client\ObjectSerializer;
 
 class PersonaPeticion implements ModelInterface, ArrayAccess
 {
@@ -20,14 +20,14 @@ class PersonaPeticion implements ModelInterface, ArrayAccess
         'fecha_nacimiento' => 'string',
         'rfc' => 'string',
         'curp' => 'string',
-        'nacionalidad' => '\VantageSimulacion\Client\Model\CatalogoNacionalidad',
-        'residencia' => '\VantageSimulacion\Client\Model\CatalogoResidencia',
-        'estado_civil' => '\VantageSimulacion\Client\Model\CatalogoEstadoCivil',
-        'sexo' => '\VantageSimulacion\Client\Model\CatalogoSexo',
+        'nacionalidad' => '\Vantage\Simulacion\MX\Client\Model\CatalogoNacionalidad',
+        'residencia' => '\Vantage\Simulacion\MX\Client\Model\CatalogoResidencia',
+        'estado_civil' => '\Vantage\Simulacion\MX\Client\Model\CatalogoEstadoCivil',
+        'sexo' => '\Vantage\Simulacion\MX\Client\Model\CatalogoSexo',
         'clave_elector_ife' => 'string',
         'numero_dependientes' => 'int',
         'fecha_defuncion' => 'string',
-        'domicilio' => '\VantageSimulacion\Client\Model\DomicilioPeticion'
+        'domicilio' => '\Vantage\Simulacion\MX\Client\Model\DomicilioPeticion'
     ];
     
     protected static $apihubFormats = [

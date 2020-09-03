@@ -22,9 +22,9 @@
         "friendsofphp/php-cs-fixer": "~2.12"
     },
     "autoload": {
-        "psr-4": { "VantageSimulacion\\Client\\" : "lib/" }
+        "psr-4": { "Vantage\\Simulacion\\MX\\Client\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "VantageSimulacion\\Client\\" : "test/" }
+        "psr-4": { "Vantage\\Simulacion\\MX\\Client\\" : "test/" }
     }
 }

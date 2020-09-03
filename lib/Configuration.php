@@ -1,6 +1,6 @@
 <?php
 
-namespace VantageSimulacion\Client;
+namespace Vantage\Simulacion\MX\Client;
 
 class Configuration
 {
@@ -16,9 +16,9 @@ class Configuration
     
     protected $password = '';
     
-    protected $host = 'https://services.circulodecredito.com.mx/sandbox/v2/vantage';
+    protected $host = '';
     
-    protected $userAgent = 'VantageSimulacion-Codegen/1.0.0/php';
+    protected $userAgent = 'Vantage\Simulacion\MX-Codegen/1.0.0/php';
     
     protected $debug = false;
     
@@ -159,7 +159,7 @@ class Configuration
     
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (VantageSimulacion\Client) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (Vantage\Simulacion\MX\Client) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    OpenAPI Spec Version: 2.0.0' . PHP_EOL;

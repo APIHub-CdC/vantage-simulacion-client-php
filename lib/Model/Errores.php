@@ -1,9 +1,9 @@
 <?php
 
-namespace VantageSimulacion\Client\Model;
+namespace Vantage\Simulacion\MX\Client\Model;
 
 use \ArrayAccess;
-use \VantageSimulacion\Client\ObjectSerializer;
+use \Vantage\Simulacion\MX\Client\ObjectSerializer;
 
 class Errores implements ModelInterface, ArrayAccess
 {
@@ -13,7 +13,7 @@ class Errores implements ModelInterface, ArrayAccess
     
     protected static $apihubTypes = [
         'folio' => 'string',
-        'errores' => '\VantageSimulacion\Client\Model\Error[]'
+        'errores' => '\Vantage\Simulacion\MX\Client\Model\Error[]'
     ];
     
     protected static $apihubFormats = [
