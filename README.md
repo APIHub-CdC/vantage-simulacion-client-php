@@ -45,7 +45,7 @@ Al iniciar sesión seguir los siguientes pasos:
 
 ### Paso 2. Capturar los datos de la petición
 
-Los siguientes datos a modificar se encuentran en **_test/Api/ApiTest.php_**
+Los siguientes datos a modificar se encuentran en **_test/Api/VantAgeApiTest.php_**
 
 Es importante contar con el setUp() que se encargará de inicializar la petición. Por tanto, se debe modificar la URL (**url_API**); y la API KEY (**x_api_key**), como se muestra en el siguiente fragmento de código:
 
