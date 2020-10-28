@@ -62,6 +62,8 @@ public function setUp()
 
 Para la petición se deberá modificar el siguiente fragmento de código con los datos correspondientes:
 
+> **NOTA:** Para más ejemplos de simulación, consulte la colección de Postman.
+
 ```php
 /**
 * Este son los métodos que se serán ejecutados en la prueba ubicado en path/to/repository/test/Api/ApiTest.php
