@@ -144,6 +144,14 @@ class VantAgeApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 503:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Vantage\Simulacion\MX\Client\Model\Errores',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -379,6 +387,14 @@ class VantAgeApi
                     $e->setResponseObject($data);
                     break;
                 case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Vantage\Simulacion\MX\Client\Model\Errores',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Vantage\Simulacion\MX\Client\Model\Errores',

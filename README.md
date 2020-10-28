@@ -45,7 +45,7 @@ Al iniciar sesión seguir los siguientes pasos:
 
 ### Paso 2. Capturar los datos de la petición
 
-Los siguientes datos a modificar se encuentran en **_test/Api/VantAgeApiTest.php_**
+Los siguientes datos a modificar se encuentran en **test/Api/ApiTest.php**
 
 Es importante contar con el setUp() que se encargará de inicializar la petición. Por tanto, se debe modificar la URL (**url_API**); y la API KEY (**x_api_key**), como se muestra en el siguiente fragmento de código:
 
@@ -64,19 +64,21 @@ Para la petición se deberá modificar el siguiente fragmento de código con los
 
 ```php
 /**
-* Este son los métodos que se serán ejecutados en la prueba ubicado en path/to/repository/test/Api/VantAgeApiTest.php
+* Este son los métodos que se serán ejecutados en la prueba ubicado en path/to/repository/test/Api/ApiTest.php
 */
 public function testGetVantageAportantes(){
     try {
         $request = new AportantesPeticion();
-        $request->setFolio("123456");
-        $request->setFechaProceso("dd/MM/yyyy");
-        $request->setNumeroCuenta("00000000");
-        $request->setDiasAtraso(10);
+        $tipoContrato = new CatalogoContrato();
+
+        $request->setFolio("1500001");
+        $request->setTipoContrato($tipoContrato::CA);
+        $request->setNumeroCuenta("2000001");
+        $request->setDiasAtraso(21);
         $result = $this->apiInstance->getVantageAportantes($this->x_api_key, $request);
         print_r($result);
     } catch (ApiException | Exception $e) {
-        echo 'Exception when calling TelcosSimulacionApi->getReporte: ', $e->getMessage(), PHP_EOL;
+        echo 'Exception when calling ApiTest->testGetVantageAportantes: ', $e->getMessage(), PHP_EOL;
     }
 }
 
@@ -85,23 +87,38 @@ public function testGetVantageNoAportantes(){
         $tipoContrato = new CatalogoContrato();
         $catalogoPago = new CatalogoFrecuenciaPago();
         $persona = new PersonaPeticion();
+        $domicilio = new DomicilioPeticion();
+        $catalogoEstados = new CatalogoEstados();
         $request = new NoAportantesPeticion();
+        
+        $domicilio->setDireccion("PASADISO ENCONTRADO 1");
+        $domicilio->setColoniaPoblacion("MONTEVIDEO");
+        $domicilio->setDelegacionMunicipio("GUSTAVO A MADERO");
+        $domicilio->setCiudad("CIUDAD DE MÉXICO");
+        $domicilio->setEstado($catalogoEstados::CDMX);
+        $domicilio->setCp("07730");
 
-        $persona->setPrimerNombre("NOMBRE");
-        $persona->setApellidoPaterno("PATERNO");
-        $persona->setApellidoMaterno("MATERNO");
-        $persona->setFechaNacimiento("1986-06-27");
-        $request->setFolio("123456");
-        $request->setFechaProceso("dd/MM/yyyy");
-        $request->setTipoContrato($tipoContrato::AA);
-        $request->setFrecuenciaPago($catalogoPago::N);
-        $request->setDiasAtraso(10);
+        $persona->setPrimerNombre("JUAN01");
+        $persona->setApellidoPaterno("PRUEBAP01");
+        $persona->setApellidoMaterno("PRUEBAM01");
+        $persona->setFechaNacimiento("1980-01-01");
+        $persona->setDomicilio($domicilio);
+
+        $request->setFolio("1600001");
+        $request->setTipoProducto("R");
+        $request->setTipoContrato($tipoContrato::TC);
+        $request->setFrecuenciaPago($catalogoPago::M);
+        $request->setDiasAtraso(21);
+        $request->setNumeroCuenta("3000001");
+        $request->setFechaApertura("2019-01-01");
+        $request->setSaldoActual(15301);
         $request->setPersona($persona);
 
-        $result = $this->apiInstance->getVantageAportantes($this->x_api_key, $request);
+
+        $result = $this->apiInstance->getVantageNoAportantes($this->x_api_key, $request);
         print_r($result);
     } catch (ApiException | Exception $e) {
-        echo 'Exception when calling TelcosSimulacionApi->getReporte: ', $e->getMessage(), PHP_EOL;
+        echo 'Exception when calling ApiTest->testGetVantageNoAportantes: ', $e->getMessage(), PHP_EOL;
     }
 }
 ```
